@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+:root{
+    --news: #7cc344;
+    --team: #DC5E53;
+    --work:  #0766F0;
+    --article-border: #eaeaea;
+    --header-bg: #f9f9f948;
+    --hover: #0056b3;
+    --articles-link:  #007bff;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+.title{
+    background-image: url('../images/nicole.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    padding: 2%;
+}
+.header{
+    display: flex;
+    justify-content: start;
+    align-self: center;
+    text-align: left;
+    width: 100%;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.header__h1{
+    width: 5%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 6px black;
+}
+.header__img{
+    width: 50px;
+}
+.subtitle{
+    background-color: var(--header-bg);
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    line-height: 30px;
+    padding: 5%;
+}
+.title__h2{
+    font-weight: bold;
+    font-size: 1.7rem;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+    margin-bottom: 2%;
+}
+.title__span{
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1rem;
+}
+.title__p{
+    width: 80%;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+}
+.footer__container{
+    display: flex;
+    justify-content: flex-end;
+    align-items:end;
+    width: 100%;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    /* width: 100%; */
+    gap: 5.5rem;
+}
+.footer__link{
+    text-decoration: none;
+    color: var(--article-border);
+    text-shadow: 0px 0px 2px #000,
+    0px 0px 2px #000,
+    0px 0px 2px #000,
+    0 0 6px #000;
+    transition: all 0.1s;
+}
+.footer__link:hover{
+    font-weight: bold;
+}
+.articles{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.articles__h2{
+    font-weight: bold;
+    font-size: 2.5rem;
+    background-color: var(--article-border);
+    padding: 3%;
+}
+.articles__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.articles__article{
+    width: 50%;
+    border: 1px solid var(--article-border);
+    padding: 3%;
+    line-height: 30px;
+}
+.articles__pastille{
+    text-transform: uppercase;
+    padding: 2%;
+    color: rgb(245, 245, 245);
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.articles__h3{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 7% 0;
+}
+.news{
+    background-color: #265700;
+}
+.team{
+    background-color: #ad0e00;
+}
+.work{
+    background-color: var(--work);
+}
+.articles__author{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 4%;
+}
+
+.articles__namedate{
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.articles__icon{
+    width: 35px;
+    height: 35px;
+}
+.articles__name{
+    font-weight: bold;
+}
+.articles__date{
+    color: rgb(87 84 84);
+}
+.articles__link{
+    display: block;
+    color: #055dbd;
+    font-weight: bold;
+    margin-top: 4%;
+    transition: all 0.1s;
+}
+.articles__link:hover{
+    color: var(--hover);
+}
+@media (max-width: 1024px){
+    body{
+        flex-direction: column;
+    }
+    .title{
+        width: 100%;
+        background-position: 50% 40%;
+        justify-content: flex-start;
+        
+    }
+    .articles{
+        width: 100%;
+        overflow: initial;
+    }
+    .footer{
+        width: 100%;
+    }
+}
+@media (max-width: 768px){
+    .articles__container{
+        flex-direction: column;
+    }
+    .articles__article{
+        width: 100%;
+    }
+    .footer__link{
+        padding: 5%;
+    }
+}
+@media (max-width: 568px){
+    .footer{
+        flex-direction: column;
+    }
+}
